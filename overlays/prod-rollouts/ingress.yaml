@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: 135.236.45.77.nip.io # rememeber to change it to yours
+    - host: lead-ops.com  # rememeber to change it to yours
       http:
         paths:
           - path: /
