@@ -7,7 +7,7 @@ metadata:
     # This enables HTTP connections from Internet clients
     kubernetes.io/ingress.allow-http: "true"
 spec:
-  ingressClassName: nginx
+  ingressClassName: nginx-green
   rules:
     - host: preview.lead-ops.com # rememeber to change it to yours
       http:
