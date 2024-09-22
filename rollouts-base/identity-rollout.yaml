@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         # CHANGE TO YOURS:<org/repo:tag>
-        - image: ghcr.io/autonomiczny/course-bm-identity:latest
+        - image: ghcr.io/autonomiczny/course-bm-identity:1.1.0
           name: identity
           ports:
             - containerPort: 8080
