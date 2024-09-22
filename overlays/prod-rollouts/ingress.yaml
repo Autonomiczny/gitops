@@ -2,12 +2,14 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: booking-microservies
+  namespace: prod
   annotations:
+    kubernetes.io/ingress.class: nginx-blue  
     nginx.ingress.kubernetes.io/rewrite-target: /$1
     # This enables HTTP connections from Internet clients
     kubernetes.io/ingress.allow-http: "true"
 spec:
-  ingressClassName: nginx-blue
+  #ingressClassName: nginx-blue
   rules:
     - host: lead-ops.com  # rememeber to change it to yours
       http:
