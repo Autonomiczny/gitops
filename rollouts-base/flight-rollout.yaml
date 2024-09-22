@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         # CHANGE TO YOURS:<org/repo:tag>
-        - image: ghcr.io/autonomiczny/course-bm-flight:1.1.0
+        - image: ghcr.io/autonomiczny/course-bm-flight:1.0.1
           name: flight
           ports:
             - containerPort: 8080
@@ -34,6 +34,11 @@ spec:
               cpu: 256m
   strategy:
     canary: 
+      canaryService: flight-canary
+      stableService: flight-stable
+      trafficRouting:
+        nginx:
+          stableIngress: booking-microservies
       steps:
       - setWeight: 20
       - pause: {}
